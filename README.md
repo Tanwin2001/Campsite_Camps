@@ -19,7 +19,7 @@
 
 ## Getting Started
 The source code is available on GitHub for further exploration and contribution.
-- Please dowload the .zip file for full code 
+- Please dowload the .zip file for full access to the code 
 ## Acknowledgments
 This project was a collaborative effort, enabling us to dive deep into web development technologies and design principles. A special thanks to our team members for their dedication and hard work:
 - Aradhyula Sai Krishna Pranay Kalyan
