@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+
+		<link
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+			integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- <link rel="stylesheet" href="landing.css" /> -->
+		<style>
+			body {
+				/* background: url(https://images.unsplash.com/photo-1492648272180-61e45a8d98a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80); */
+				color: black;
+				width: 100%;
+				background-size: cover;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
+					"Helvetica", "Arial", sans-serif;
+			}
+
+			.lead {
+				width: 400px;
+				height: 300px;
+				background: rgba(255, 255, 255, 0.15);
+				padding: 1rem;
+				backdrop-filter: blur(25px);
+				box-shadow: 13px 14px 169px 1px rgba(250, 247, 250, 0.24);
+			}
+
+			p {
+				font-size: 1.4rem;
+			}
+
+			.navbar {
+				width: 100%;
+				background: rgba(0, 0, 0, 0.25);
+				height: 4rem;
+				backdrop-filter: blur(30px);
+			}
+
+			.navbar.scrolled {
+				/* background: rgba(255, 255, 255, 0.25); */
+				background: rgba(0, 0, 0, 0.25);
+				backdrop-filter: blur(30px);
+				transition: 1000ms all;
+			}
+
+			.navbar-brand.scrolled {
+				color: white;
+			}
+
+			.nav-link.scrolled {
+				color: white;
+				font-size: 22px;
+				font-family: Ubuntu;
+				font-weight: normal;
+				cursor: pointer;
+			}
+
+			.navbar-brand {
+				padding-left: 2rem;
+				color: white;
+				font-size: 36px;
+				font-weight: normal;
+				cursor: pointer;
+			}
+
+			.navbar-brand:hover {
+				color: rgb(128, 128, 128);
+				filter: blur(0.5px);
+				transition: 100ms all;
+			}
+
+			.nav-link {
+				color: white;
+				font-size: 22px;
+				font-family: Ubuntu;
+				font-weight: normal;
+				cursor: pointer;
+			}
+
+			.colorNum {
+				color: orange;
+				font-size: 2rem;
+			}
+
+			.colorHead {
+				color: black;
+				font-weight: 600;
+				font-size: 2rem;
+			}
+
+			.lead {
+				font-weight: normal;
+				padding: 30px;
+			}
+
+			.nav-link:hover {
+				color: rgb(128, 128, 128);
+			}
+
+			.crop {
+				width: 700px;
+				height: 600px;
+				object-fit: cover;
+			}
+
+			.imgGrid {
+				height: 400px;
+				width: 800px;
+			}
+
+			hr {
+				width: 1000px;
+				margin: auto;
+			}
+
+			.blurBack {
+				backdrop-filter: blur(300px);
+			}
+
+			html,
+			body {
+				margin: 0px;
+				padding: 0px;
+				overflow-x: hidden;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.col-lg-4 {
+				padding: 40px;
+			}
+
+			.footer {
+				height: 2.5rem;
+			}
+            
+		</style>
+		<title>Campsite Camps</title>
+	</head>
+	<body>
+		<!-- Nav Bar -->
+		<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+			<a class="navbar-brand scrollNav" href="/">Campsite Camps</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item" style="padding-right: 1rem;">
+						<a class="nav-link scrollNav" href="/login">Login</a>
+					</li>
+					<li class="nav-item" style="padding-right: 2rem;">
+						<a class="nav-link scrollNav" href="/register"
+							>Sign Up</a
+						>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div
+			id="carouselExampleFade"
+			class="carousel slide carousel-fade"
+			data-ride="carousel"
+			style="width: inherit;"
+		>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img
+						src="https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+						class="d-block w-100"
+						style="height: 750px; width: inherit;"
+					/>
+					<div
+						class="carousel-caption d-none d-md-block blurBox"
+						style="margin-bottom: 18rem; color: black;"
+					>
+						<h5 class="display-2">
+							Camp at your Dream Destination
+						</h5>
+						<p>
+							Your Dream to Camp at the destination is something
+							we can make you achieve
+						</p>
+						<a
+							href="/campgrounds"
+							class="btn btn-lg"
+							style="color: white; background: #e6b800;"
+							>Take me to Campgrounds</a
+						>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img
+						src="https://images.unsplash.com/photo-1456613820599-bfe244172af5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+						class="d-block w-100"
+						style="height: 750px; width: inherit;"
+					/>
+					<div
+						class="carousel-caption d-none d-md-block blurBox"
+						style="margin-bottom: 18rem;"
+					>
+						<h5 class="display-2">
+							Camp at your Dream Destination
+						</h5>
+						<p>
+							Your Dream to Camp at the destination is something
+							we can make you achieve
+						</p>
+						<a
+							href="/campgrounds"
+							class="btn btn-lg"
+							style="color: white; background: green;"
+							>Take me to Campgrounds</a
+						>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img
+						src="https://trekveda.com/images/content__images/phulara-ridge/phulara-ridge-trek-2.jpg"
+						class="d-block w-100"
+						style="height: 750px; width: inherit;"
+					/>
+					<div
+						class="carousel-caption d-none d-md-block blurBox"
+						style="margin-bottom: 18rem;"
+					>
+						<h5 class="display-2" style="color: black;">
+							Camp at your Dream Destination
+						</h5>
+						<p style="color: black;">
+							Your Dream to Camp at the destination is something
+							we can make you achieve
+						</p>
+						<a
+							href="/campgrounds"
+							class="btn btn-lg"
+							style="color: white; background: red;"
+							>Take me to Campgrounds</a
+						>
+					</div>
+				</div>
+			</div>
+			<a
+				class="carousel-control-prev"
+				href="#carouselExampleFade"
+				role="button"
+				data-slide="prev"
+			>
+				<span
+					class="carousel-control-prev-icon"
+					aria-hidden="true"
+				></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a
+				class="carousel-control-next"
+				href="#carouselExampleFade"
+				role="button"
+				data-slide="next"
+			>
+				<span
+					class="carousel-control-next-icon"
+					aria-hidden="true"
+				></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<br /><br />
+        <div >
+		<div class="container-fluid">
+			<h1 class="display-2 text-center">Why Choose Us?</h1>
+			<div class="row justify-content-around">
+				<div class="col-lg-4">
+					<div class="rowhead">
+						<span class="colorNum"> 01 </span>
+						<span class="colorHead"> Travel </span>
+					</div>
+					<p class="lead">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Fuga nemo autem dignissimos corrupti illo ea dolor
+						laboriosam rerum minima, assumenda soluta, similique
+						totam eligendi reprehenderit voluptatum facere a tenetur
+						id?
+					</p>
+				</div>
+				<div class="col-lg-4">
+					<div class="rowhead">
+						<span class="colorNum"> 02 </span>
+						<span class="colorHead"> Experience </span>
+					</div>
+					<p class="lead">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Fuga nemo autem dignissimos corrupti illo ea dolor
+						laboriosam rerum minima, assumenda soluta, similique
+						totam eligendi reprehenderit voluptatum facere a tenetur
+						id?
+					</p>
+				</div>
+				<div class="col-lg-4">
+					<div class="rowhead">
+						<span class="colorNum"> 03 </span>
+						<span class="colorHead"> Relax </span>
+					</div>
+					<p class="lead">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Fuga nemo autem dignissimos corrupti illo ea dolor
+						laboriosam rerum minima, assumenda soluta, similique
+						totam eligendi reprehenderit voluptatum facere a tenetur
+						id?
+					</p>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<br />
+
+		<!-- Rev's Div -->
+
+		<section class="container-fluid px-0 s">
+			<div class="row content">
+				<div class="col-lg-6 align-self-center order-md-1 order-2">
+					<img
+						src="https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+						class="img-fluid imgGrid"
+						alt=""
+						style="width: 100%; padding-left: 1rem;"
+					/>
+				</div>
+				<div
+					class="col-lg-6 text-center order-1 align-self-center order-md-2"
+				>
+					<div class="row justify-content-center">
+						<div class="col-10 col-lg-8 blurb">
+							<h2 class="" style="color: steelblue;">
+								Adventure
+							</h2>
+							<p class="lead my-0">
+								Rise higher than the mountains with our camping
+								trips, smell how it feels when the clouds
+								surround you. Swim deeper than the oceans with
+								us, embrace the cold of the deep seas. Take a
+								part in the most exciting adventures in your
+								life with us. See the life a bit closer than the
+								others.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br />
+			<hr />
+			<br />
+			<div class="row content">
+				<div class="col-lg-6 align-self-center order-2">
+					<img
+						src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+						class="img-fluid imgGrid"
+						alt=""
+						style="width: 100%; padding-right: 1.5rem;"
+					/>
+				</div>
+				<div class="col-lg-6 text-center align-self-center order-1">
+					<div class="row justify-content-center">
+						<div class="col-10 col-lg-8 blurb">
+							<h2 class="" style="color: red;">Explore</h2>
+							<p class="lead">
+								One’s destination is never a place, but a new
+								way of seeing things. Explore the World with a
+								new a perspective. Find yourself. As always said
+								<span style="font-weight: 450;"
+									><em>
+										"The best journeys in life are those
+										that answer questions you never thought
+										to ask"</em
+									></span
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br />
+			<hr />
+			<br />
+			<div class="row content">
+				<div class="col-lg-6 align-self-center order-md-1 order-2">
+					<img
+						src="https://images.unsplash.com/photo-1519848036961-198010af3ffe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+						class="img-fluid imgGrid"
+						alt=""
+						style="width: 100%; padding-left: 1rem;"
+					/>
+				</div>
+				<div
+					class="col-lg-6 text-center order-1 align-self-center order-md-2"
+				>
+					<div class="row justify-content-center">
+						<div class="col-10 col-lg-8 blurred-box">
+							<h2 class="" style="color: Green;">Escapade</h2>
+
+							<p class="lead">
+								We travel not to escape life, but for life not
+								to escape us. You know
+								<span style="font-weight: 450;"
+									><em
+										>Travel can be one of the most rewarding
+										forms of introspection.</em
+									></span
+								>
+								Travel and change of place impart new vigor to
+								the mind. All journeys have secret destinations
+								of which the traveller is unaware.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Rev's Div Close -->
+
+		<!-- <div class="container-fluid">
+			<div class="row"></div>
+		</div> -->
+
+		<!-- Body ending-->
+        </div>
+		<!-- footer -->
+		<!-- Footer -->
+		<br />
+		<footer>
+			<div class="footer-copyright text-center py-3">
+				© 2020 Copyright:
+				<a href="#">Campsite Camps.</a>
+			</div>
+		</footer>
+		<!-- Footer -->
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- <script>
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $("#mainNav");
+          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+        $(document).scroll(function () {
+          var $nav = $(".scrollNav");
+          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script> -->
+	</body>
+</html>
